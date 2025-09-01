@@ -1,0 +1,40 @@
+package com.company; // In one java file we cannot enter more than two public class
+ class Employee{
+    public int id; // defining attributes
+    public String name;
+    public int sallery;
+
+    // creating methods
+     public void display(){
+         System.out.println("my id is " + id + " and my name is " + name );
+     }
+
+     public int getSallery(){
+         return sallery;
+     }
+}
+public class custom_class {
+     public static void main(String[] args) {
+Employee obj = new Employee();
+Employee obj1 = new Employee();
+
+// setting attributes
+obj.id = 56;
+obj.name = "aman";
+obj.sallery = 45000;
+
+obj1.id = 12;
+obj1.name = "surbhi";
+obj1.sallery = 50000;
+
+// printing attributes
+//System.out.println(obj.id);
+//System.out.println(obj.name);
+
+ obj.display();
+ int sallery = obj.getSallery();
+ System.out.println(sallery);
+ obj1.display();
+
+    }
+}
