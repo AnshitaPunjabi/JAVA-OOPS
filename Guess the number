@@ -1,0 +1,54 @@
+//This program is a fun console-based guessing game that uses random number generation, user input, loops, and conditions to practice basic Java concepts.
+
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+
+class Game {
+
+    public int number;
+    public int noofGuesses = 0;
+    public int inputNumber;
+
+    public int getNoofGuesses(){
+       return noofGuesses;
+    }
+
+    public void setNoofGuesses(int noofGuesses){
+        this.noofGuesses = noofGuesses;
+    }
+    public Game(){
+        Random rand = new Random();
+        number = rand.nextInt(100);
+    }
+
+    public void takeuserinput(){
+        System.out.println("Guess the number");
+        Scanner sc = new Scanner(System.in);
+        inputNumber = sc.nextInt();
+    }
+
+    public boolean iscorrectnumber(){
+        noofGuesses++;
+     if(number==inputNumber){
+         System.out.println("yes you guessed it right it is " + number + " and you guessed it in " + noofGuesses + " attempts");
+     return true;
+     } else if (number<inputNumber) {
+         System.out.println("too high");
+     } else if (number>inputNumber) {
+         System.out.println("too low");
+     }
+        return false;
+    }
+}
+public class guess_number {
+    public static void main(String[] args) {
+        Game g = new Game();
+        boolean b = false;
+        while (!b) {
+            g.takeuserinput();
+           b=  g.iscorrectnumber();
+            System.out.println(b);
+        }
+    }
+}
