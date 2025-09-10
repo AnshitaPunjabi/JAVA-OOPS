@@ -1,4 +1,5 @@
-package com.company; // In one java file we cannot enter more than two public class
+//This program is a basic example of classes and objects in Java, showing how to define attributes, methods, create objects, and use them to represent employees.
+package com.company;
  class Employee{
     public int id; // defining attributes
     public String name;
